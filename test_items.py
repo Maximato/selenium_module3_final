@@ -10,6 +10,6 @@ def test_existence_of_button(browser):
     # time.sleep(10)
 
     # find button 'add to basket'
-    btn = browser.find_element_by_css_selector("button.btn-add-to-basket")
+    buttons = len(browser.find_elements_by_css_selector("button.btn-add-to-basket"))
 
-    assert btn.is_displayed(), "Error, button is not displayed"
+    assert buttons == 1, f"Error! Should be one button 'Add to basket'. {buttons} buttons were found"
