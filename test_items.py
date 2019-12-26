@@ -12,4 +12,4 @@ def test_existence_of_button(browser):
     # find button 'add to basket'
     btn = browser.find_element_by_css_selector("button.btn-add-to-basket")
 
-    assert btn.get_attribute("value") is not None, "Error, empty button value"
+    assert btn.is_displayed(), "Error, button is not displayed"
